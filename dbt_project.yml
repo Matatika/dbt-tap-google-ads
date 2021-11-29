@@ -1,0 +1,24 @@
+name: 'tap_google_ads'
+version: '0.0.1'
+
+config-version: 2
+
+profile: local
+
+source-paths: ["models"]
+analysis-paths: ["analysis"]
+target-path: "target"
+clean-targets: ["target"]
+test-paths: ["tests"]
+data-paths: ["data"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+models:
+  tap_googleads:
+    +full_refresh: true
+    base:
+      materialized: table
+      
+vars:
+  schema: "{{ env_var('TARGET_POSTGRES_SCHEMA') }}" # the schema where the raw GoogleAds tables are located
