@@ -1,9 +1,9 @@
-# dbt-tap-google-ads
+# dbt-tap-googleads
 This dbt package contains models for Matatika's [tap-googleads](https://github.com/Matatika/tap-googleads).
 
 The main focus of the package is to transform and clean up the Google Ads campagins and ad groups data into usable analytics models.
 
-This package along with the [Analyze Bundle](https://github.com/Matatika/analyze-google-ads) are designed intended to work together to provide instant insights on the [Matatika Platform](https://www.matatika.com).
+This package along with the [Analyze Bundle](https://github.com/Matatika/analyze-googleads) are designed intended to work together to provide instant insights on the [Matatika Platform](https://www.matatika.com).
 
 | **model**              | **description** |
 | ---------------------- | ------------------------------------------------------------- |
@@ -21,7 +21,7 @@ Include in your `packages.yml`
 
 ```yaml
 packages:
-  - git: https://github.com/Matatika/dbt-tap-google-ads.git
+  - git: https://github.com/Matatika/dbt-tap-googleads.git
 ```
 
 ### One time setup (after creating a python virtual environment)
