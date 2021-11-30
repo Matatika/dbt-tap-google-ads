@@ -1,6 +1,6 @@
 {{ config(materialized='table') }}
 
-with adgroupsperformance_stream as (
+with stream_adgroupsperformance as (
     select * from "{{var('schema')}}".stream_adgroupsperformance
 ),
 ad_groups_performance as (
@@ -11,6 +11,6 @@ ad_groups_performance as (
         , metrics__clicks as metrics_clicks
         , metrics__cost_micros as metrics_cost_micros
         , metrics__impressions as metrics_impressions
-    from adgroupsperformance_stream
+    from stream_adgroupsperformance
 )
 select * from ad_groups_performance

@@ -1,6 +1,6 @@
 {{ config(materialized='table') }}
 
-with campaign_performance_by_gender_and_device_stream as (
+with stream_campaign_performance_by_gender_and_device as (
     select * from "{{var('schema')}}".stream_campaign_performance_by_gender_and_device
 ),
 campaign_performance_by_gender_and_device as (
@@ -19,6 +19,6 @@ campaign_performance_by_gender_and_device as (
         , metrics__impressions as metrics_impressions
         , segments__date as segments_date
         , segments__device as segments_device
-    from campaign_performance_by_gender_and_device_stream
+    from stream_campaign_performance_by_gender_and_device
 )
 select * from campaign_performance_by_gender_and_device

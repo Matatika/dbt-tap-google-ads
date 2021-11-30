@@ -1,6 +1,6 @@
 {{ config(materialized='table') }}
 
-with campaign_performance_stream as (
+with stream_campaign_performance as (
     select * from "{{var('schema')}}".stream_campaign_performance
 ),
 campaign_performance as (
@@ -15,6 +15,6 @@ campaign_performance as (
         , metrics__impressions as metrics_impressions
         , segments__date as segments_date
         , segments__device as segments_device
-    from campaign_performance_stream
+    from stream_campaign_performance
 )
 select * from campaign_performance
