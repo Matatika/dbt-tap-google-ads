@@ -14,7 +14,7 @@
         , {{ target.schema }}.stream_campaign_performance_by_age_range_and_device
         , {{ target.schema }}.stream_campaign_performance_by_gender_and_device
         , {{ target.schema }}.stream_campaign_performance_by_location
-        , {{ target.schema }}.stream_customer_hierarchystream
+        , {{ target.schema }}.stream_customer_hierarchy
         , {{ target.schema }}.stream_customers
         , {{ target.schema }}.stream_geo_target_constant
     {%- endset -%}
