@@ -1,3 +1,6 @@
+<a href="https://github.com/Matatika/dbt-tap-googleads/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/Matatika/dbt-tap-googleads"></a> ![dbt logo and version](https://img.shields.io/static/v1?logo=dbt&label=dbt-version&message=[%3E=0.20.x;%3C=1.0.0]&color=orange)
+
+
 # dbt-tap-googleads
 This dbt package contains models for Matatika's [tap-googleads](https://github.com/Matatika/tap-googleads).
 
@@ -18,7 +21,12 @@ This package along with the [Analyze Bundle](https://github.com/Matatika/analyze
 Check [dbt Hub](https://hub.getdbt.com/) for the latest installation instructions, or [read the dbt docs](https://docs.getdbt.com/docs/package-management) for more information on installing packages.
 
 Include in your `packages.yml`
-
+```yaml
+packages:
+  - package: Matatika/dbt-tap-googleads
+    version: [">=0.1.0", "<1.0.0"]
+```
+or
 ```yaml
 packages:
   - git: https://github.com/Matatika/dbt-tap-googleads.git
