@@ -1,7 +1,7 @@
 {{ config(materialized='table') }}
 
 with stream_campaign_performance as (
-    select * from "{{var('schema')}}".stream_campaign_performance
+    select * from {{ source('googleads_source', 'stream_campaign_performance') }}
 ),
 campaign_performance as (
     select
