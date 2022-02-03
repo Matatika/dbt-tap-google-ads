@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: googleads_source
+    description: Google ads source table created by Matatika's tap-googleads
+    schema: "{{ env_var('DBT_TARGET_SCHEMA') }}"
+    tables: 
+      - name: stream_adgroupsperformance
+        description: Source table of Google Ads ad group performance
+      - name: stream_campaign_performance_by_age_range_and_device
+        description: Source table of Google Ads campaign performance by age range and device
+      - name: stream_campaign_performance_by_gender_and_device
+        description: Source table of Google Ads campaign performance by gender and device
+      - name: stream_campaign_performance_by_location
+        description: Source table of Google Ads campaign performance by location
+      - name: stream_campaign_performance
+        description: Source table of Google Ads campaign performance
