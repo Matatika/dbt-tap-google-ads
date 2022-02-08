@@ -1,5 +1,5 @@
 name: "tap_googleads"
-version: "0.2.0"
+version: "0.2.1"
 require-dbt-version: [">=0.20.0", "<=1.0.0"]
 
 config-version: 2
@@ -22,4 +22,4 @@ models:
       materialized: table
 
 vars:
-  schema: "{{ env_var('DBT_TARGET_SCHEMA') }}" # the schema where the raw GoogleAds tables are located
+  schema: "{{ env_var('DBT_TARGET_SCHEMA') }}"
